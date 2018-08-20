@@ -7,7 +7,7 @@ node {
     }
 
     stage('Build image') {
-        zip -r build/release.zip Dockerfile FlaskApp
+        sh 'zip -r build/release.zip Dockerfile FlaskApp'
     }
 
     stage('Test image') {
