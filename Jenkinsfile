@@ -7,6 +7,7 @@ node {
     }
 
     stage('Build image') {
+        sh 'mkdir build'
         sh 'zip -r build/release.zip Dockerfile FlaskApp'
     }
 
